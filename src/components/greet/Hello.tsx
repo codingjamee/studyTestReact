@@ -3,5 +3,5 @@ type HelloProps = {
 };
 
 export const Hello = (props: HelloProps) => {
-  return <div>{props.name} Hello</div>;
+  return <div>Hello {props.name}</div>;
 };
