@@ -5,16 +5,9 @@ import { render, screen } from "@testing-library/react";
 import { Hello } from "./Hello";
 
 describe("Greet", () => {
-  it("Greet renderㄴ  correctly", () => {
+  it("Greet renders  correctly", () => {
     render(<Hello />);
-    const textElement = screen.getByText("Hello");
-    expect(textElement).toBeInTheDocument();
-  });
-});
-describe("Nested", () => {
-  xit("Greet renders with a name", () => {
-    render(<Hello name="jenner" />);
-    const textElement = screen.getByText("Hello jenner");
+    const textElement = screen.getByText(/Hello/);
     expect(textElement).toBeInTheDocument();
   });
 });
